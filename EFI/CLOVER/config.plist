@@ -254,7 +254,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -v keepsyms=1 npci=0x2000 debug=0x100 kext-dev-mode=1 -no_compat_check</string>
+		<string>dart=0 nv_disable=1 -ath9485 keepsyms=1 npci=0x2000 debug=0x100 kext-dev-mode=1 -no_compat_check</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -263,16 +263,24 @@
 		<string>boot.efi</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
+		<key>HibernationFixup</key>
+		<false/>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NeverDoRecovery</key>
 		<true/>
 		<key>NeverHibernate</key>
 		<true/>
+		<key>RtcHibernateAware</key>
+		<false/>
 		<key>Secure</key>
 		<false/>
+		<key>SkipHibernateTimeout</key>
+		<false/>
+		<key>StrictHibernate</key>
+		<false/>
 		<key>Timeout</key>
-		<integer>10</integer>
+		<integer>3</integer>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
@@ -288,7 +296,7 @@
 			<key>AFGLowPowerState</key>
 			<false/>
 			<key>Inject</key>
-			<integer>1</integer>
+			<string>Detect</string>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
@@ -558,8 +566,50 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>Trust</key>
+		<key>BiosReleaseDate</key>
+		<string>02/02/2018</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
+		<key>BiosVersion</key>
+		<string>MBA61.88Z.0105.B00.1802021222</string>
+		<key>Board-ID</key>
+		<string>Mac-7DF21CB3ED6977E5</string>
+		<key>BoardManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>BoardSerialNumber</key>
+		<string>C02335403QXF49PJA</string>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>BoardVersion</key>
+		<string>1.0</string>
+		<key>ChassisAssetTag</key>
+		<string>Air-Enclosure</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>0x0A</string>
+		<key>Family</key>
+		<string>MacBook Air</string>
+		<key>FirmwareFeatures</key>
+		<string>0xE00FE137</string>
+		<key>FirmwareFeaturesMask</key>
+		<string>0xFF1FFF3F</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
+		<key>Mobile</key>
 		<true/>
+		<key>PlatformFeature</key>
+		<string>0xFFFF</string>
+		<key>ProductName</key>
+		<string>MacBookAir6,2</string>
+		<key>SerialNumber</key>
+		<string>C02L932JF5V7</string>
+		<key>SmUUID</key>
+		<string>142712E9-2B03-4D0D-9E38-1985EC60840E</string>
+		<key>Version</key>
+		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
